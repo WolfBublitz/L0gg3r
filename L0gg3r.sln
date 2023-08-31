@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L0gg3r", "src\L0gg3r.csproj", "{0F7C122F-C072-4D95-8628-4C18634A85E7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{776031F3-375A-47F6-8538-E850A1F57C43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LoggerTests", "LoggerTests", "{D0E2EED9-F0EB-4230-A81E-8278FA9869E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerTests", "tests\LoggerTests\src\LoggerTests.csproj", "{78079102-6868-4108-8EE1-2087242BE147}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,13 @@ Global
 		{0F7C122F-C072-4D95-8628-4C18634A85E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F7C122F-C072-4D95-8628-4C18634A85E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F7C122F-C072-4D95-8628-4C18634A85E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78079102-6868-4108-8EE1-2087242BE147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78079102-6868-4108-8EE1-2087242BE147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78079102-6868-4108-8EE1-2087242BE147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78079102-6868-4108-8EE1-2087242BE147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0E2EED9-F0EB-4230-A81E-8278FA9869E4} = {776031F3-375A-47F6-8538-E850A1F57C43}
+		{78079102-6868-4108-8EE1-2087242BE147} = {D0E2EED9-F0EB-4230-A81E-8278FA9869E4}
 	EndGlobalSection
 EndGlobal
