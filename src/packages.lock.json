@@ -10,7 +10,7 @@
       },
       "L0gg3r.CodeAnalyzer": {
         "type": "Direct",
-        "requested": "[1.0.0-preview.1, 2.0.0)",
+        "requested": "[1.0.*-*, 2.0.0)",
         "resolved": "1.0.0-preview.1",
         "contentHash": "4jPzesuo2uwwP5r2OiIyxmo4DNGMH6JEG6JAZRNNxIFYcm1sG1hnDXoOAR+IPkfXmWo9IrYD15BaEb1CIiNGKg==",
         "dependencies": {
