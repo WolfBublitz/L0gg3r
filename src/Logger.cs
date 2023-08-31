@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -14,8 +13,11 @@ public sealed class Logger : IAsyncDisposable
 
     private readonly IDisposable parentLoggerOutputHandlerDisposer;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Logger"/> class.
+    /// </summary>
     public Logger()
-        : this(Assembly.GetCallingAssembly().GetName().Name)
+        : this(Assembly.GetCallingAssembly().GetName().Name ?? "Logger")
     {
     }
 
