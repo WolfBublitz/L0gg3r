@@ -18,27 +18,18 @@ jobs:
       dotnet-version: 7.0.x
       configuration: Release
 
-  PipelineTests:
+  LoggerTests:
     name: Pipeline Tests
     needs: [BuildNugetPackage]
     uses: ./.github/workflows/execute-test.yml
     with:
       dotnet-version: 7.0.x
       configuration: Release
-      project-path: ./tests/PipelineTests/src
-
-  UnitTests:
-    name: Unit Tests
-    needs: [BuildNugetPackage]
-    uses: ./.github/workflows/execute-test.yml
-    with:
-      dotnet-version: 7.0.x
-      configuration: Release
-      project-path: ./tests/UnitTests
+      project-path: ./tests/LoggerTests/src
 
   PublishToGithub:
     name: Publish to Github
-    needs: [PipelineTests,UnitTests ]
+    needs: [ LoggerTests ]
     uses: ./.github/workflows/publish-to-github.yml
     with:
       package-path: ./**/*.nupkg
