@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net7.0": {
+      "L0gg3r.Base": {
+        "type": "Direct",
+        "requested": "[1.0.*-*, 2.0.0)",
+        "resolved": "1.0.0-preview.1",
+        "contentHash": "f7ampO4eS7CImLkJGXem81FNQjyp3ilTqHoTxuNRlJXA8T65UPsKkG6xeolW9TyjPoUdh0t8V5zGghZJPFTQGg=="
+      },
+      "L0gg3r.CodeAnalyzer": {
+        "type": "Direct",
+        "requested": "[1.0.0-preview.1, 2.0.0)",
+        "resolved": "1.0.0-preview.1",
+        "contentHash": "4jPzesuo2uwwP5r2OiIyxmo4DNGMH6JEG6JAZRNNxIFYcm1sG1hnDXoOAR+IPkfXmWo9IrYD15BaEb1CIiNGKg==",
+        "dependencies": {
+          "StyleCop.Analyzers": "1.2.0-beta.507"
+        }
+      },
+      "MinVer": {
+        "type": "Direct",
+        "requested": "[4.3.*, 5.0.0)",
+        "resolved": "4.3.0",
+        "contentHash": "YNVAW3loCFW4kTwensApaZUl+7xREK75QQNOFSbsbXx2sCSm9/IHBjUHsJGn3u0UA5r/sAqrdYBNUlOFfLhUrA=="
+      },
+      "StyleCop.Analyzers": {
+        "type": "Transitive",
+        "resolved": "1.2.0-beta.507",
+        "contentHash": "/FtugDT66cKJJ+GGH7rNpG6UDrT4iIWz45M6lrXXHobDUFDHw+q5VgkbiR+6ffTO564ge7w6fQh/eoQhVdJO8Q==",
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.507"
+        }
+      },
+      "StyleCop.Analyzers.Unstable": {
+        "type": "Transitive",
+        "resolved": "1.2.0.507",
+        "contentHash": "gTY3IQdRqDJ4hbhSA3e/R48oE8b/OiKfvwkt1QdNVfrJK2gMHBV8ldaHJ885jxWZfllK66soa/sdcjh9bX49Tw=="
+      }
+    }
+  }
+}

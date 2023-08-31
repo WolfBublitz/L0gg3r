@@ -1,0 +1,32 @@
+name: Run Test
+
+on:
+  workflow_call:
+    inputs:
+      project-path:
+        required: true
+        type: string
+      dotnet-version:
+        required: true
+        type: string
+      configuration:
+        required: true
+        type: string
+        default: Release
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ inputs.dotnet-version }}
+      - name: "Add NuGet Source"
+        run: dotnet nuget add source "https://nuget.pkg.github.com/WolfBublitz/index.json" --username WolfBublitz --password ${GITHUB_TOKEN} --store-password-in-clear-text --name github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Test
+        run: cd ${{ inputs.project-path }} && dotnet test --configuration ${{ inputs.configuration }}

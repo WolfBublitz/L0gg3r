@@ -1,0 +1,34 @@
+name: Build Nuget Package
+
+on:
+  workflow_call:
+    inputs:
+      configuration:
+        required: true
+        type: string
+        default: Release
+      dotnet-version:
+        required: true
+        type: string
+
+jobs:
+  BuildNugetPackage:
+    name: Build Nuget Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ inputs.dotnet-version }}
+      - name: "Add NuGet Source"
+        run: dotnet nuget add source "https://nuget.pkg.github.com/WolfBublitz/index.json" --username WolfBublitz --password ${GITHUB_TOKEN} --store-password-in-clear-text --name github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create the package
+        run: dotnet pack --configuration ${{ inputs.configuration}}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget-package
+          path: src/bin/Release/*.nupkg

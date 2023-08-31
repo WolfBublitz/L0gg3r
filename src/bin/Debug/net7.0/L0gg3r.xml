@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>L0gg3r</name>
+    </assembly>
+    <members>
+        <member name="M:L0gg3r.Logger.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:L0gg3r.Logger"/> class.
+            </summary>
+            <param name="name">The name of the <see cref="T:L0gg3r.Logger"/>.</param>
+        </member>
+        <member name="P:L0gg3r.Logger.Name">
+            <summary>
+            Gets the name of the logger.
+            </summary>
+        </member>
+        <member name="M:L0gg3r.Logger.DisposeAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:L0gg3r.Logger.Log(L0gg3r.Base.LogLevel,System.Object)">
+            <summary>
+            Logs the <paramref name="message"/> with <paramref name="logLevel"/>.
+            </summary>
+            <param name="logLevel">The <see cref="T:L0gg3r.Base.LogLevel"/>.</param>
+            <param name="message">The message.</param>
+        </member>
+    </members>
+</doc>

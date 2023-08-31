@@ -1,0 +1,89 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "L0gg3r/0.0.0-preview.0": {
+        "dependencies": {
+          "L0gg3r.Base": "1.0.0-preview.1",
+          "L0gg3r.CodeAnalyzer": "1.0.0-preview.1",
+          "MinVer": "4.3.0"
+        },
+        "runtime": {
+          "L0gg3r.dll": {}
+        }
+      },
+      "L0gg3r.Base/1.0.0-preview.1": {
+        "runtime": {
+          "lib/net7.0/L0gg3r.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "L0gg3r.CodeAnalyzer/1.0.0-preview.1": {
+        "dependencies": {
+          "StyleCop.Analyzers": "1.2.0-beta.507"
+        },
+        "runtime": {
+          "lib/net7.0/L0gg3r.CodeAnalyzer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MinVer/4.3.0": {},
+      "StyleCop.Analyzers/1.2.0-beta.507": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.507"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.507": {}
+    }
+  },
+  "libraries": {
+    "L0gg3r/0.0.0-preview.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "L0gg3r.Base/1.0.0-preview.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f7ampO4eS7CImLkJGXem81FNQjyp3ilTqHoTxuNRlJXA8T65UPsKkG6xeolW9TyjPoUdh0t8V5zGghZJPFTQGg==",
+      "path": "l0gg3r.base/1.0.0-preview.1",
+      "hashPath": "l0gg3r.base.1.0.0-preview.1.nupkg.sha512"
+    },
+    "L0gg3r.CodeAnalyzer/1.0.0-preview.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4jPzesuo2uwwP5r2OiIyxmo4DNGMH6JEG6JAZRNNxIFYcm1sG1hnDXoOAR+IPkfXmWo9IrYD15BaEb1CIiNGKg==",
+      "path": "l0gg3r.codeanalyzer/1.0.0-preview.1",
+      "hashPath": "l0gg3r.codeanalyzer.1.0.0-preview.1.nupkg.sha512"
+    },
+    "MinVer/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YNVAW3loCFW4kTwensApaZUl+7xREK75QQNOFSbsbXx2sCSm9/IHBjUHsJGn3u0UA5r/sAqrdYBNUlOFfLhUrA==",
+      "path": "minver/4.3.0",
+      "hashPath": "minver.4.3.0.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.2.0-beta.507": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/FtugDT66cKJJ+GGH7rNpG6UDrT4iIWz45M6lrXXHobDUFDHw+q5VgkbiR+6ffTO564ge7w6fQh/eoQhVdJO8Q==",
+      "path": "stylecop.analyzers/1.2.0-beta.507",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.507.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.507": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gTY3IQdRqDJ4hbhSA3e/R48oE8b/OiKfvwkt1QdNVfrJK2gMHBV8ldaHJ885jxWZfllK66soa/sdcjh9bX49Tw==",
+      "path": "stylecop.analyzers.unstable/1.2.0.507",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.507.nupkg.sha512"
+    }
+  }
+}

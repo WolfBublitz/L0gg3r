@@ -1,0 +1,45 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: "*"
+    tags: "*"
+  pull_request:
+    branches: "*"
+  release:
+    types:
+      - created
+
+jobs:
+  BuildNugetPackage:
+    name: Build Nuget Package
+    uses: ./.github/workflows/build-nuget-package.yml
+    with:
+      dotnet-version: 7.0.x
+      configuration: Release
+
+  PipelineTests:
+    name: Pipeline Tests
+    needs: [BuildNugetPackage]
+    uses: ./.github/workflows/execute-test.yml
+    with:
+      dotnet-version: 7.0.x
+      configuration: Release
+      project-path: ./tests/PipelineTests/src
+
+  UnitTests:
+    name: Unit Tests
+    needs: [BuildNugetPackage]
+    uses: ./.github/workflows/execute-test.yml
+    with:
+      dotnet-version: 7.0.x
+      configuration: Release
+      project-path: ./tests/UnitTests
+
+  PublishToGithub:
+    name: Publish to Github
+    needs: [PipelineTests,UnitTests ]
+    uses: ./.github/workflows/publish-to-github.yml
+    with:
+      package-path: ./**/*.nupkg
+    if: github.event_name == 'release' && github.event.action == 'created'

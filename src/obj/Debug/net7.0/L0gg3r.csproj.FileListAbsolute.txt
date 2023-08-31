@@ -1,0 +1,14 @@
+/home/wolf/L0gg3r/L0gg3r/src/bin/Debug/net7.0/L0gg3r.deps.json
+/home/wolf/L0gg3r/L0gg3r/src/bin/Debug/net7.0/L0gg3r.dll
+/home/wolf/L0gg3r/L0gg3r/src/bin/Debug/net7.0/L0gg3r.pdb
+/home/wolf/L0gg3r/L0gg3r/src/bin/Debug/net7.0/L0gg3r.xml
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.csproj.AssemblyReference.cache
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.GeneratedMSBuildEditorConfig.editorconfig
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.AssemblyInfoInputs.cache
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.AssemblyInfo.cs
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.csproj.CoreCompileInputs.cache
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.dll
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/refint/L0gg3r.dll
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.xml
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/L0gg3r.pdb
+/home/wolf/L0gg3r/L0gg3r/src/obj/Debug/net7.0/ref/L0gg3r.dll

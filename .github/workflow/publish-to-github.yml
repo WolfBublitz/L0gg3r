@@ -1,0 +1,22 @@
+name: Publish To Github
+
+on:
+  workflow_call:
+    inputs:
+      package-path:
+        required: true
+        type: string
+
+jobs:
+  Publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: nuget-package
+      - name: "Add NuGet Source"
+        run: dotnet nuget add source "https://nuget.pkg.github.com/WolfBublitz/index.json" --username WolfBublitz --password ${GITHUB_TOKEN} --store-password-in-clear-text --name github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish to GitHub
+        run: dotnet nuget push ${{ inputs.package-path }} -s github
